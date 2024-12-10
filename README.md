@@ -26,6 +26,21 @@ The end result will be one script which does the following:
   - github action secrets creation, for use with github action
   - github action (the CICD Script) written, and injected with env vars from 1pass (for plaintext config items such as github username, docker username, container registry to use), and referencing github action secrets previously created (server ip, server username, ssh private key to allow github action runner to connect to server, github token)
 
+## Roadmap:
+
+Project Iterations
+
+- [x] Step 1: 1pass + yaml injection
+
+  - A. Setup Vault, Item, Fields on 1password.
+  - B. Retrieve 1password fields and inject them into an example yaml script.
+
+- [ ] Step 2: 1pass, GH repo & secrets setup, GHA yaml injection
+  - A. Setup Vault, 2 Items-- one secure, one plaintext, each with several fields on 1password.
+  - B. Create a Github Repo for project
+  - C. Add Github Action Secrets to project
+  - B. Retrieve 1password fields and inject them into a Github Action yaml script.
+
 ## Things to keep in mind when working with 1password
 
 I previously used 1password at an employer and began using it for personal projects. It's great because it offers secure password storage, plus an API to access passwords programmatically.
