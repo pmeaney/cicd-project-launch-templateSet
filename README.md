@@ -111,7 +111,7 @@ graph TD
 
 ### **Generated YAML File**
 
-The script creates a YAML file (`basic-yaml-env-subst.yml`) that integrates the secure note data:
+The script creates a YAML file (`basic-yaml-env-subst.yml`) that integrates the example data (registryName, projectName) from the 1password "secure note" item:
 
 ```yaml
 # basic-yaml-env-subst.yml
@@ -123,8 +123,8 @@ on:
     branches:
       - main
 env:
-  REGISTRY: "ghcr.io/YourRegistryName"
-  PROJECT_NAME: "YourProjectName"
+  REGISTRY: "ghcr.io/registryName"
+  PROJECT_NAME: "projectName"
 ```
 
 ---
