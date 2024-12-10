@@ -26,25 +26,6 @@ The end result will be one script which does the following:
   - github action secrets creation, for use with github action
   - github action (the CICD Script) written, and injected with env vars from 1pass (for plaintext config items such as github username, docker username, container registry to use), and referencing github action secrets previously created (server ip, server username, ssh private key to allow github action runner to connect to server, github token)
 
-## **How It Works**
-
-This script automates three primary tasks:
-
-1. **Vault Setup**:
-
-   - Create a new 1Password vault or select an existing one.
-   - Default vault name: `ExperimentVault1`.
-
-2. **Secure Note Creation**:
-
-   - Create a secure note with two customizable fields: `projectName` and `registryName`.
-   - Default secure note name: `ExperimentSecureNote1`.
-
-3. **YAML File Generation**:
-   - Retrieve the secure note's fields and inject their values into a `basic-yaml-env-subst.yml` file.
-
----
-
 ## Things to keep in mind when working with 1password
 
 I previously used 1password at an employer and began using it for personal projects. It's great because it offers secure password storage, plus an API to access passwords programmatically.
@@ -58,23 +39,6 @@ For this project's item is a "Secure Note"-- but there are many [categories of i
 - Items have a name & category. Items are sort of like a page in a roladex. They can hold multiple things in them, in this case, "fields"-- which are typically key/value pairs.
 - Field(s) can even have sections.
 - Technically, other useful things can be stored at the field level, such as storing small files (useful for key files), and MFA-auto-authenticator (this is a super useful functionality providing automated MFA token generation based on QR code screen capturing-- rather than doing so via a smart phone authenticator app)-- but that is beyond the scope of this project.
-
-## **Project Workflow**
-
-```mermaid
-graph TD
-    A[Start Script] --> B[Display Welcome Message]
-    B --> C[Set Up 1Password Vault]
-    C --> D{Existing Vault?}
-    D -- Yes --> E[Select Vault from List]
-    D -- No --> F[Create New Vault]
-    E --> G[Create Secure Note]
-    F --> G
-    G --> H[Enter Field Values]
-    H --> I[Retrieve Secure Note Data]
-    I --> J[Generate YAML File]
-    J --> K[Script Completion]
-```
 
 ---
 
@@ -104,28 +68,6 @@ graph TD
    ```bash
    ./createProject.sh
    ```
-
----
-
-## **File Outputs**
-
-### **Generated YAML File**
-
-The script creates a YAML file (`basic-yaml-env-subst.yml`) that integrates the example data (registryName, projectName) from the 1password "secure note" item:
-
-```yaml
-# basic-yaml-env-subst.yml
-
-name: 1. build, publish, 2. login, pull, run.
-
-on:
-  push:
-    branches:
-      - main
-env:
-  REGISTRY: "ghcr.io/registryName"
-  PROJECT_NAME: "projectName"
-```
 
 ---
 
@@ -225,12 +167,6 @@ UUID    NAME
 106     Passport
 101     Bank Account
 115     Crypto Wallet
-```
-
-### **Retrieve Secure Note Data**
-
-```bash
-op item get SecureNoteID --vault VaultName --format json | jq '.'
 ```
 
 ---
