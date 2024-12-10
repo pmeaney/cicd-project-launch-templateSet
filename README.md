@@ -55,7 +55,7 @@ Each item contains "fields", and there are a variety of [cateogires of fields](h
 
 In our case, we use a "Secure Note". I like using Secure Note simply because it's an easy place for me to keep short project descriptions next to a project's main config values & secrets. Secure Notes are essentially just a small markdown file. And fields are just key/value pairs attached to the secure note. We use "password" and "text" fields types
 
-- Items have a name & category. Items are sort of like a page in a roladex. They can hold multiple things in them, in this case, "fields"-- which are typically key/value pairs.
+- Items have a name & category. Items are sort of like a page in a roladex (where the roladex is the vault). They can hold multiple things in them, in this case, "fields"-- which are typically key/value pairs.
 - Field(s) can even have sections.
 - Technically, other useful things can be stored at the field level, such as storing small files (useful for key files), and MFA-auto-authenticator (this is a super useful functionality providing automated MFA token generation based on QR code screen capturing-- rather than doing so via a smart phone authenticator app)-- but that is beyond the scope of this project.
 
