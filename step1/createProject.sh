@@ -3,7 +3,7 @@
 # Functional DevOps script for 1password and YAML injection.
 
 # Project Introduction
-projectIntro="Welcome to the 1Password Vault Setup Script for DevOps. We'll guide you through creating a vault, adding secure notes, and injecting them into a YAML file."
+projectIntro="Welcome to the Project Setup Script.  This process will automatically create a 1password vault, add secure config data, and inject the config data into a YAML file"
 yamlFile="basic-yaml-env-subst.yml"
 
 # Function: Display Welcome Message
