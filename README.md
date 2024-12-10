@@ -39,7 +39,7 @@ Project Iterations
   - A. Setup Vault, 2 Items-- one secure, one plaintext, each with several fields on 1password.
   - B. Create a Github Repo for project
   - C. Add Github Action Secrets to project
-  - B. Retrieve 1password fields and inject them into a Github Action yaml script.
+  - D. Retrieve 1password fields and inject them into a Github Action yaml script.
 
 ## Things to keep in mind when working with 1password
 
