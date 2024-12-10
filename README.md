@@ -76,16 +76,15 @@ In our case, we use a "Secure Note". I like using Secure Note simply because it'
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
-   cd <repo-directory>
+   git clone git@github.com:pmeaney/cicd-project-launch-templateSet.git
    ```
 2. Make the script executable:
    ```bash
-   chmod +x createProject.sh
+   chmod +x ./step1/createProject.sh
    ```
 3. Run the script:
    ```bash
-   ./createProject.sh
+   ./step1/createProject.sh
    ```
 
 ---
