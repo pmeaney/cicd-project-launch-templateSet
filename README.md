@@ -49,7 +49,11 @@ I previously used 1password at an employer and began using it for personal proje
 
 Vault -> Item -> Field(s).
 
-For this project's item is a "Secure Note"-- but there are many [categories of items](https://support.1password.com/item-categories/) available. I like using Secure Note simply because it's an easy place for me to keep short project descriptions next to a project's main config values & secrets. Secure Notes are essentially just a small markdown file. And fields are just key/value pairs attached to the secure note.
+A vault is a collection of items-- and there are a variety of [categories of items](https://support.1password.com/item-categories/) available.
+
+Each item contains "fields", and there are a variety of [cateogires of fields](https://developer.1password.com/docs/cli/item-fields/) available.
+
+In our case, we use a "Secure Note". I like using Secure Note simply because it's an easy place for me to keep short project descriptions next to a project's main config values & secrets. Secure Notes are essentially just a small markdown file. And fields are just key/value pairs attached to the secure note. We use "password" and "text" fields types
 
 - Items have a name & category. Items are sort of like a page in a roladex. They can hold multiple things in them, in this case, "fields"-- which are typically key/value pairs.
 - Field(s) can even have sections.
@@ -108,9 +112,7 @@ For this project's item is a "Secure Note"-- but there are many [categories of i
 
 ### **Create a Secure Note**
 
-In 1password, there's a bit of a hierarchy:
-
-The script uses the following command to create a secure note with two fields-- it specifies which vault, item category, item title, and fields to create.
+The script uses the following command to create a secure note with two fields-- it specifies which vault ("VaultName"), item category ("Secure Note" represented by its CategoryID 003 and title "SecureNoteTitle"), and fields ("projectName", "registryName") to create.
 
 ```bash
 op item create \
@@ -121,7 +123,7 @@ op item create \
  'registryName[text]=RegistryValue'
 ```
 
-Regarding how to set up each "field" (key/value pairs), here are some excerpts from the from the [1password docs](https://developer.1password.com/docs/cli/item-create/#with-an-item-json-template):
+Regarding how to set up each "field" (key/value pairs), here are some excerpts from the from the [1password docs](https://developer.1password.com/docs/cli/item-create):
 
 > The op item create command can take a list of assignment statements as arguments to create fields on an item.
 
@@ -150,7 +152,7 @@ op item create \
 op item create \
  --category 003 \
  --title "DevOpsSecureNote" \
- --vault Exp123 \
+ --vault ExperimentalVault123 \
  'projectName[text]=someTextABC' \
  'registryName[text]=someTextDEF'
 ```
