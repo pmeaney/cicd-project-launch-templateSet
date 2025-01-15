@@ -39,7 +39,9 @@ Project Iterations
 
 #### Step 1 video intro:
 
-<video src="https://github.com/pmeaney/cicd-project-launch-templateSet/blob/main/videoContent/v1-150-speed.gif" controls></video>
+[![Step1 Video Intro](https://github.com/pmeaney/cicd-project-launch-templateSet/blob/main/videoContent/v1-150-speed.mov)]
+
+![Step1 Video Intro gif](https://github.com/pmeaney/cicd-project-launch-templateSet/blob/main/videoContent/v1-150-speed.gif)
 
 ### Step 2
 
