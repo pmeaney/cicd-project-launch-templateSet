@@ -5,7 +5,10 @@
 # This "Step1" of the project will:
 #  1. Automatically create a 1password vault ("ExperimentVault1")
 #  2. Add secure config data:
-#     - It Creates "ExperimentSecureNote1"
+#     - It Creates "ExperimentSecureNote1" of type "Secure Note" (represented by code "003")
+#       For simplicity, it creates a SecureNote because SecureNotes just store a single value.
+#       In the project's next step, we'll ask the user for a field name and a field value.
+#       (Ultimately, this project's purpose is to streamline adding fields to both Github & 1password)
 #     - and adds two items to it: "projectName" and "registryName"
 #  3. Inject the config data into a YAML file"
 #     - This just serves as a simplified example for the next step, which will be a Github Actions Yaml file.

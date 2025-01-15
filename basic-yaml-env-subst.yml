@@ -1,0 +1,12 @@
+# basic-yaml-env-subst.yml
+
+name: 1. build, publish, 2. login, pull, run.
+
+on:
+  push:
+    branches:
+      - main
+      # - blah
+env:
+  REGISTRY: "myDockerUsername"
+  PROJECT_NAME: "newProj1"
