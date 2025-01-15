@@ -2,6 +2,14 @@
 
 # Functional DevOps script for 1password and YAML injection.
 
+# This "Step1" of the project will:
+#  1. Automatically create a 1password vault ("ExperimentVault1")
+#  2. Add secure config data:
+#     - It Creates "ExperimentSecureNote1"
+#     - and adds two items to it: "projectName" and "registryName"
+#  3. Inject the config data into a YAML file"
+#     - This just serves as a simplified example for the next step, which will be a Github Actions Yaml file.
+
 # Project Introduction
 projectIntro="Welcome to the Project Setup Script.  This process will automatically create a 1password vault, add secure config data, and inject the config data into a YAML file"
 yamlFile="basic-yaml-env-subst.yml"

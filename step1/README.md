@@ -19,8 +19,7 @@ This script automates three primary tasks:
 
 2. **Secure Note Creation**:
 
-   - Create a secure note with two customizable fields: `projectName` and `registryName`.
-   - Default secure note name: `ExperimentSecureNote1`.
+   - Create a secure note (Default name `ExperimentSecureNote1`) with two customizable fields: `projectName` and `registryName`.
 
 3. **YAML File Generation**:
    - Retrieve the secure note's fields and inject their values into a `basic-yaml-env-subst.yml` file.
