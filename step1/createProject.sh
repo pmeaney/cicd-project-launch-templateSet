@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Functional DevOps script for 1password and YAML injection.
-
 # This "Step1" of the project will:
 #  1. Automatically create a 1password vault ("ExperimentVault1")
 #  2. Add secure config data:

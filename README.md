@@ -30,10 +30,18 @@ The end result will be one script which does the following:
 
 Project Iterations
 
+### Step 1
+
 - [x] Step 1: 1pass + yaml injection
 
   - A. Setup Vault, Item, Fields on 1password.
   - B. Retrieve 1password fields and inject them into an example yaml script.
+
+#### Step 1 video intro:
+
+<video src="./videoContent/v1-150-speed.mov" controls></video>
+
+### Step 2
 
 - [ ] Step 2: 1pass, GH repo & secrets setup, GHA yaml injection
   - A. Setup Vault, 2 Items-- one secure, one plaintext, each with several fields on 1password.

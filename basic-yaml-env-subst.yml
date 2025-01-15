@@ -8,5 +8,5 @@ on:
       - main
       # - blah
 env:
-  REGISTRY: "myDockerUsername"
-  PROJECT_NAME: "newProj1"
+  REGISTRY: "reg1"
+  PROJECT_NAME: "proj1"
