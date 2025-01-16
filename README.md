@@ -2,15 +2,17 @@
 
 > "A set of templates for creating cicd integrated Github Repos, based on setting up project credentials via 1password API, then creating github repo, secrets, and action"
 
-This project is to eventually be a workflow for creating new Github Actions CICD integrated projects. It will begin as a template or two, and expand from there.
+This project will eventually be a workflow for creating new Github Actions CICD integrated projects. It will begin as a template or two, and expand from there.
 
-This project was created to simplify the project of managing secrets with 1Password and dynamically generating Github Action CICD YAML configuration files for DevOps workflows.
+This project was created to simplify the process clicking through several things (1password to setup project secrets, create new repo, add secrets to Github Actions, import secrets into Github Actions yam file) and providing a new convention for project creation. Note: When I say "Secrets", I just say it for simplicity-- I just mean general things like IP addresses, Account Names, Project Names, etc-- as well as more protected things like API keys or passwords.
+
+The project manages secrets with a Secret Management tool (1Password-- which we used at my previous company, and which has great features) and dynamically generates a Github Repo, sets it up with the secrets, and generates a Github Action CICD YAML file, preconfigured to import the secrets.
 
 It's designed for developers and DevOps engineers who want a streamlined way to interact with 1Password's CLI and automate the injection of 1password items into configuration files-- demonstrating examples of plaintext config values (e.g. public, not necessary to protect info such as some configuration values), as well as typically protected passwords (e.g. API keys and other secrets).
 
 It's a process to essentially bootstrap the following things:
 
-- Credentials (1password, github action secrets)
+- Credentials (at two locations: 1password, github action secrets)
 - Github repo creation
 - Github Action script creation & environment variable substitution.
 
