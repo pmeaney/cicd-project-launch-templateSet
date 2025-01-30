@@ -43,7 +43,9 @@ Project Iterations
 
 ![Step1 Video Intro gif](https://github.com/pmeaney/cicd-project-launch-templateSet/blob/main/videoContent/v1-150-speed.gif)
 
-### Step 2
+### Notes re: Upcoming Steps & Step 2
+
+For CICD interaction-- Remember: use a no-pass ssh key. Github Actions CICD doesn't like passworded ssh keys
 
 - [ ] Step 2: 1pass, GH repo & secrets setup, GHA yaml injection
   - A. Setup Vault, 2 Items-- one secure, one plaintext, each with several fields on 1password.
